@@ -30,8 +30,16 @@ public class Labirinto {
         }
     }
 
-    public void percorreLabirinto() {
+    private boolean resolverLabirinto(int x, int y) {
+        if(x < 0 || x >= labirinto.length || y < 0 || y >= labirinto[x].length) return false;
+        if(labirinto[x][y] == PAREDE || labirinto[x][y] == CAMINHO_SOLUCAO) return false;
+        if(labirinto[x][y] == SAIDA) return true;
+        //recursao
+        return false;
+    }
 
+    public boolean percorreLabirinto() {
+        return resolverLabirinto(0, 0);
     }
 
     public void imprimeLabirinto() {
