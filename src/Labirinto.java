@@ -51,7 +51,7 @@ public class Labirinto {
     public void imprimeLabirinto() {
         for(int i = 0; i < labirinto.length; i++) {
             for(int j = 0; j < labirinto[i].length; j++) {
-                System.out.println(labirinto[i][j]);
+                System.out.print(labirinto[i][j]);
             }
             System.out.println();
         }
