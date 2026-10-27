@@ -34,7 +34,13 @@ public class Labirinto {
         if(x < 0 || x >= labirinto.length || y < 0 || y >= labirinto[x].length) return false;
         if(labirinto[x][y] == PAREDE || labirinto[x][y] == CAMINHO_SOLUCAO) return false;
         if(labirinto[x][y] == SAIDA) return true;
-        //recursao
+        
+        labirinto[x][y] = CAMINHO_SOLUCAO;
+        
+        if(resolverLabirinto(x - 1, y) || resolverLabirinto(x + 1, y)
+            || resolverLabirinto(x, y - 1) || resolverLabirinto(x, y + 1)) return true;
+        
+        labirinto[x][y] = CAMINHO_ABERTO;
         return false;
     }
 
@@ -43,6 +49,11 @@ public class Labirinto {
     }
 
     public void imprimeLabirinto() {
-
+        for(int i = 0; i < labirinto.length; i++) {
+            for(int j = 0; j < labirinto[i].length; j++) {
+                System.out.println(labirinto[i][j]);
+            }
+            System.out.println();
+        }
     }
 }
