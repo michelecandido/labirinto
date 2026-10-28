@@ -1,3 +1,5 @@
+package Etapa1;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -26,7 +28,7 @@ public class Labirinto {
             }
 
         } catch(IOException e) {
-            System.out.println("Erro: " + e.getMessage());
+            throw new IllegalArgumentException("Erro ao ler o arquivo: " + e.getMessage());
         }
     }
 

@@ -1,6 +1,8 @@
+package Etapa1;
+
 import java.lang.reflect.Method;
 
-public class ValidadorEtapa1 {
+public class ValidadorEtapa1EstudanteMRK {
     // Códigos ANSI para colorir o texto
     private static final String ANSI_RESET = "\u001B[0m";
     private static final String ANSI_VERDE = "\u001B[32m";
