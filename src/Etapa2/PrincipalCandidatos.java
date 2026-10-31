@@ -11,7 +11,7 @@ public class PrincipalCandidatos {
         ArrayList<String> nomes = new ArrayList<>();
         ArrayList<String> partidos = new ArrayList<>();
         
-        try(BufferedReader brNomes = new BufferedReader(new FileReader("/src/Etapa2/nomes.txt"));
+        try(BufferedReader brNomes = new BufferedReader(new FileReader("src/Etapa2/nomes.txt"));
         BufferedReader brPartidos = new BufferedReader(new FileReader("src/Etapa2/partidos.txt"))) {
             String linha;
             while((linha = brNomes.readLine()) != null) {
@@ -25,6 +25,7 @@ public class PrincipalCandidatos {
         }
 
         Random numAleatorio = new Random();
-        Candidato[] candidatos = new Candidato[100];
+        int dado = numAleatorio.nextInt(100) + 1;
+        Candidato[] candidatos = new Candidato[dado];
     }
 }
